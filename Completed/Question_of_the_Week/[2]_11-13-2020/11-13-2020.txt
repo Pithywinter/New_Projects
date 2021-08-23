@@ -1,0 +1,24 @@
+11/13/2020-                                                                                                                                2
+
+
+ What are the 3 categories of cloud computing, give examples of each, and summarize why companies are moving their critical IT infrastructure to cloud-based environments?
+
+
+The 3 categories are:
+* Infrastructure as a Service  (This provides instant computing infrastructure that is managed over the internet, so companies can gain fast access to resources needed to build out services & technologies over the cloud, & IaaS companies like Amazon, Rackspace, & Google manage the hardware so clients do not have to. This allows companies to have control of their infrastructure without needing an external IT contractor.)
+
+
+* Platform as a Service  (This provides a framework like operating systems, databases, programming language execution environments, etc that is accessible to multiple developers to build custom software upon like Windows Azure, Heroku, and AWS Elastic Beanstalk. This saves companies time & money because they do not have to start from scratch when creating applications.)
+
+
+* Software as a Service  (This provides software to the user over the internet that does not need to be downloaded & installed on individual devices, which makes it highly scalable like Google Apps, Docusign, & Dropbox. This lets companies and employees access their access level related applications anywhere, and budget for exactly what they want since SaaS providers operate a subscription model with a fixed, inclusive monthly account fee.) 
+
+
+
+
+
+
+Companies are moving their infrastructure to cloud-based environments because cloud-based computing allows remote working for employees, increases collaboration, reduces cost, increases efficiency, ensures server availability for disaster recovery, & centralizes software & security updates.
+
+
+Tonight's Question of the Day: In-depth Answer is brought to you by salting your password; If you don't salt your password, it ain't worth a lick!

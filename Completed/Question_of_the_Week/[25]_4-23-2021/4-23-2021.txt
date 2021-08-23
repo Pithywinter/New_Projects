@@ -1,0 +1,24 @@
+4/23/2021
+
+
+What is the difference between a type 1 hypervisor and a type 2 hypervisor, and what are the most common vulnerabilities of each?
+
+First, what is a hypervisor? A hypervisor is software that creates a virtualization layer separating physical resources like CPU/ Processors, and RAM of your host machine’s hardware from the virtual machines created. The virtual machines that are created are called guest virtual machines. The hypervisor emulates available resources so the guest virtual machines can use them, because whatever OS the machine uses, it thinks the physical hardware is available to it.
+
+
+Type 1 Hypervisor- also called bare metal or native, are for production workloads and enterprises, but comes with a licensing cost. The vendors for Type 1 include VMware vSphere, KVM, Microsoft Hyper-V, Citrix Hypervisor, IBM Red Hat Enterprise Virtualization (RHEV) and Oracle VM Server.
+
+
+Type 1 can dynamically locate available resources depending on the needs of the VM and can even assign more resources than is available. The VMs use only the amount of RAM they need to perform a particular task and be fully functional. A Type 1 runs directly on the host machine to control hardware and manage guest OSs. This also increases its security with nothing in between the Hypervisor and the CPU that an attacker could compromise.
+
+
+Type 2 Hypervisor- also called a hosted hypervisor, are for personal use, test and development environments and multi-platform end-points, and also act as management consoles for virtual machines. The vendors for Type 2 include VMware Workstation, Vmware Fusion, Windows Virtual PC, KVM, Parallels Desktop, and Oracle VM VirtualBox.
+
+
+Type 2 occupies resources that are allocated to a VM, and an over assigning of RAM to the VMs, could crash the host machine. Type 2 runs on an OS as a process and adds other features of a Type 1. 
+
+
+The most common vulnerabilities for both types are Denial of Service (DoS), code execution, improper configuration and running unnecessary services, memory corruption, hypervisors not updated on time, and an inability to generate sufficient entropy (unless the host machine is equipped with a Trusted Platform Module {TPM}). The highest attack source may come from guest OS users.
+
+
+Brought to you by: CircleCI as long as it passes the test, like it did on my machine.

@@ -1,0 +1,26 @@
+7/10/2021
+
+
+What is a shared responsibility model, and what are the differences between Amazon AWS and Microsoft Azure’s shared responsibility model?
+
+
+A shared responsibility model is a framework for cloud security providers and users that outlines what a cloud provider’s security obligations are, as well as what the user’s security obligations are. 
+
+
+With AWS, it is responsible for the infrastructure including software, hardware, networking, and the physical facilities that house the cloud services, and security configuration of its managed services. 
+
+The user is responsible for the secure usage of AWS’s unmanaged services (things the user selects) like MFA, management of guest OS of the EC2 instance, installed applications, and the configuration of the AWS firewall, and managing their data.  
+
+
+For Azure, the provider is responsible for the effective functionality of the services, data classification and accountability.
+
+
+The users are responsible for host infrastructure, network controls, and the configuration of services.
+
+
+Some other cloud providers include Google Cloud and Oracle Cloud. 
+
+
+
+
+Brought to you by Google Cloud since 2010.

@@ -1,0 +1,12 @@
+5/29/20
+
+What is COBIT 2019, what makes this version different from its predecessors, and how is it compared to ITIL?
+
+
+Developed by the Information Systems Audit and Control Association (ISACA), COBIT 2019 is categorized as an enterprise information and technology governance and management framework, and maintains a distinction from a IT service management approach. COBIT stands for Control Objectives for Information and Related Technology. COBIT 5 improved upon the criticisms of the previous versions, because of the passing-of-tasks-down-the-line behavior that could be produced by COBIT practices. COBIT 5 suggested more rote rules and documentation for a more holistic and integrated governance. COBIT 2019 is more considered an umbrella, open-source-like framework that focuses on the enterprises needs, specifically the design factor of allowing enterprises of any size to create their own customized governance mechanism. 
+
+
+Information Technology Infrastructure Library (ITIL) is a best practices framework that focuses on IT service staying relevant to the businesses needs. While COBIT 5 and previous versions are more of a top-down strategy for governance only, and ITIL is more of a bottom-up strategy that focuses on the management of IT services.
+
+
+Brought to you by: buzzwords because B.A.C.H. (Blockchain AI Cyber Hackers) 

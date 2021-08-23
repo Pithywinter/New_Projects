@@ -1,0 +1,54 @@
+1/27/21                                                                                                                                14
+
+Why is social engineering so effective, what are the most effective attacks, techniques, and vectors, and what can be done to mitigate these threats?
+
+In regards to cybersecurity, social engineering is the art of exploiting human psychology for access to anything (influence for gain), as it is the path of least resistance. It is so effective because it does not require a great deal of technical skills to locate and compromise a person in a moment of weakness. It could take hours to months to brute force a network for credentials, but with social engineering it could take only minutes to gain those credentials. Experienced social engineers relate well with others, and manipulate others into speaking/acting contrary to their normal manner, to gain information or access. They quickly establish a personal connection to establish rapport. Most malware is trying to trick a user using social engineering, with a low percentage trying to exploit a technical flaw. People are social engineering’s attack vector. As software is becoming more secure, social engineering tactics are becoming more prevalent. 
+
+The reasons for these attacks are for monetary gain, activism causes, entertainment, knowledge, ego, or revenge. Based on Maslow’s Hierarchy of needs, most of the base needs are gained through social engineering, and even self actualization and recognition needs.
+
+The most effective attacks come from phishing/vishing and spear phishing combined with ransomware . 
+Phishing is one of the most exploited forms of social engineering attacks, and they are usually done by sophisticated hacking groups, through Tor networks and similar, with plenty of funding and time. These are most successful through email scams. These look like:
+        * Court orders link
+        * IRS refund attachment
+        * Job postings on job search websites
+        * Banking username and password entry emails
+        * Dropbox password reset link
+        * Facebook message link
+        * Ransom for account
+
+Ransomeware use has greatly increased in recent years. These look like:
+        * URGENT ACCOUNT INFO.PDF.zip/.rar attachments
+
+Phishing works with an innocent and simple subject line, and once opened, the message has to be compelling enough to warrant a click on a link or opening an attachment. These are becoming even more successful because emails are looking more legitimate and attacks are becoming more sophisticated. 
+
+Spear phishing/Whaling works as an Advanced Persistent Threat (APT) in that during its two phases, Recon and Attack, the attack stage uses a tailor made-for-the-target email that seems to come from a trusted source, and the recon stage could take months to a year of gathering information, usually with spyware, before convincing the target to instal malicious software or go to a malicious website.
+
+Vishing works as an attacker, acting as an authority or with familiarity, calls someone, with a little bit of information on a target, and extracts login credentials, social security number, and further information. They then call another person, armed with this information and refine their attack. After some time, they can often pass themselves off as an employee, like an assistant of someone significant. These sound like:
+        * “I just need…”
+
+Other common social engineering attacks are tailgating, pretexting, impersonation, and dumpster diving.
+Tailgating is where a person enters an ID badge locked door behind someone before it closes or by asking a low level employee to hold the door open for them. Pretexting is when an attacker develops a story for justifying the questions being asked. Impersonation is when an attacker dresses and acts like an employee, often prompting help from other employees without question. Dumpster diving is called pre-hacking as an attacker would gather large amounts of information from improperly discarded materials on a predetermined target to impersonate them later on.
+
+Mitigation techniques include:
+        * Not opening emails in the spam folder
+        * Not opening attachments from unknown senders
+        * Use a reputable Antivirus software
+        * Regularly backing up to the cloud or external hardware, then disconnecting the backup drive
+        * Regular training tailored to each department in an organization 
+        * Empower employees to make correct security decisions
+        * Regular testing against social engineering techniques 
+        * Use a Spam and Virus email filter
+        * Have a good IDS/IPS solution
+        * Regular reviewing of logs for understanding abnormal behavior
+        * Verifying the From address, and hover over links and verify the url
+        * If called, establish the identity of the person without hints and offer to call back the known person, at the number known and not from the number called from. Ask questions or place them on hold.
+        * Never give personal info over phone or on unsecured websites
+        * Beware pop-ups
+        * For social network, trust no-one, only give out limited information, never post home photos or schedules, and click on links and videos from unknown origins
+        * Have a mobile device management solution or secure web browser for BYOD 
+        * Not giving in to executives that want special privileges or access on devices. That could compromise security
+        * Limit employee’s information access io information based on need
+        * Use multi-factor authentication with strong passwords that are regularly changed
+        * Define and implement a thorough security policy
+
+Brought to you by: 01101101 01100101 00101100 00100000 01101111 01100010 01110110 01101001 01101111 01110101 01110011 01101100 01111001 00101110

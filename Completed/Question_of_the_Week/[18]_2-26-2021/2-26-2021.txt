@@ -1,0 +1,24 @@
+2/26/2021                                                                                                                                18
+
+What is cybersecurity automation and why would it be effective to an organization? Are there any cons?
+
+Cybersecurity automation is a solution concept to help address the lack of talent in IT, and the ever increasing sophistication and frequency of attacks. At the end of 2019, there were about 2.8 million cybersecurity professionals between North America and APAC. The amount of trained professionals that was suggested to balance the threats was around 4 million more. Organizations are reporting that it is hard to find talent, and that they are in a shortage of availability of talent. As of 2020, it has been reported that the average cost of a data breach was $3.86 million, time to identify a breach was 207 days, and 95% of breaches were caused by human error. With nearly 70% of business leaders commenting that they feel their cybersecurity risks are increasing, it is no surprise that automation as a solution was presented, particularly because on average every employee has access to 11 million files, and with the pandemic, forcing businesses to have their employees work remotely without a good governance strategy. Some other stats worth mentioning are:
+
+Manufacturing companies account for 25% of all ransomware attacks, followed by professional services at 17%, and government organizations at 13%. 
+Supply chain attacks were up 78% in 2019.
+The Healthcare industry incurs an average data breach cost of $7.13 million.
+The US government allocated around $18.78 billion for cybersecurity spending in 2021.
+Security leaders have stated that their two top focuses for 2021 are cloud security and security automation.
+
+Cybersecurity automation works by Robotic Process Automation (RPA) and Security Orchestration Automation and Response (SOAR) tools, and compliments Security Information Event Management (SIEM). It can help remove the burden of manually performing repetitive tasks like threat detection, minimizing response times, application and device inventory and discovery, automatic rollout of updates and patches, and reducing risk of human error. 
+
+The cons of cybersecurity automation are interesting. Employing SOAR tools will help highlight vulnerabilities but will not solve all the security gaps. Like any tool, such as a SIEM, you need to properly configure your basic security controls and rules. AI is expensive and companies may risk overspending. AI needs ongoing updates and enhancements to match the constant evolution of cyber threats. Cybercriminals are studying AI as well, and can create AI proof programs and can pollute malware to make it appear harmless. Machine learning is data intensive and requires 10x the amount of data to understand the details of network behavior. 
+
+
+Finally, there is a fear in the workforce that cybersecurity automation will take away jobs. While manual testing may be greatly reduced due to AI, professionals will still be needed to understand and use these tools, and will have more ability to focus on other security areas. As the threats to the cyber landscape change, experts and skilled professionals will still be needed to adapt to and help address the changes. 
+
+Brought to you by: Packet sniffing with wireshark-I see what you are doing, so quit it.
+As a personal side note:
+My perspective on the worry that cybersecurity automation will take away jobs is that we cannot fear such things. We should not be tying our identities to our jobs and roles so much that when an organization has to change, that we cannot adapt and change with it. We are a part of something larger than ourselves. Cybersecurity is an organization, an emergent property of our combined IT and security minded behaviors. For an organization to survive and thrive, we must reinforce it with our own robustness and adaptability. We, the particles that make up this system, must become bigger than ourselves, than we are right now. We must always continue to learn, grow, work hard, and adapt. When all of us are doing that, the organization is robust, and when it needs to change, we can adapt. If changes need to happen quickly, then we need to be always prepared for change. We must look upon that organization as a living entity, with needs for survival and growth. If we do not adapt quickly enough, we are weakened, and worse, defeated. Adversaries do not wait.
+
+

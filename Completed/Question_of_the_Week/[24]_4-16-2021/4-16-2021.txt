@@ -1,0 +1,24 @@
+4/16/2021                                                                                                                                24
+
+
+Pick a topic: Jokeroo, CryptoMix Clop Ransomware, Fleeceware, or Dridex. What is it, why is it dangerous, and is there a mitigation strategy?
+
+
+Jokeroo-  A Ransomware as a Service (RaaS) that was first promoted as a GrandCab RaaS. The name was then changed to Jokeroo. Jokeroo has membership tiers for payouts, where a person would pay for a membership package that costs from $90 - $600. The lowest package offers 85% of ransom payments, with the other 15% going to Jokeroo, and includes a lifetime license, and the victims payments in Bitcoin. Other tiers include 100% of the ransom payments to the person and extra features like different cryptocurrency payment options and ransomware strains, plus Salsa20 encryption. With the ever increasing adoption of cryptocurrency, Jokeroo and other RaaS, or Malware as a Service, will continue to thrive. During 2020, 15 new ransomware affiliate schemes appeared, and have seen competing services offer special deals. As these services grow, every target, no matter the size, is a potential victim. 
+
+
+Fleeceware- Although this is not a significant cybersecurity threat, fleeceware are mobile applications with no malicious code, that work as advertised, passing Google and Apple’s vetting processes. However, the applications come with hidden, excessive, and increasing subscription fees over time, even after uninstalling the app. The subscriptions have been moving from annual, to monthly and weekly payments. Over 600 million mobile phone users have downloaded this type of malware, with most unaware.
+
+
+The mitigation strategy for fleeceware is to try to stay with apps from prominent developers. Also do a price comparison with some other similar services. Check your subscriptions with iOS and Android to see what you are signed up with.
+
+Dridex- is a malware, also known as Bugat and Cridex, that utilizes Microsoft Word macros by way of opening an email attachment in Word or Excel, to steal banking credentials. This impacts the confidentiality of customer data and the availability of data and systems. Dridex originally first appeared in 2012, and by 2015 had become one of the most prevalent financial trojans. More recent versions of Dridex exploit vulnerability CVE-2017-0199, a vulnerability specific to Microsoft Office and Wordpad, allowing remote code execution for deletion of files, downloading of software, and establishing a virtual network. Dridex’s primary threat to financial activity is the infiltration of browsers, detection of online banking access, and injection of malware or keylogging software to steal customer login data. Then it transmits data via peer to peer (P2P) networks in the XML or binary format. Dridex has evolved several times, adapting to browser updates. Dridex shares some of its code with its predecessor trojans Cridex and Bugat, but is concealed better because of the P2P communication. 
+
+Mitigations include ensuring systems cannot execute macros, update IDS and IPS often, use up to date antivirus engines and signatures, back up data regularly, open email attachments with caution, and update the OS with patches.
+
+
+CryptoMix Clop Ransomware- associated with the FIN11 threat actor group, Clop was introduced as the new variant in the Cryptomix family, in 2019. In October of 2020, it became the first ransomware to demand over 20 million dollars. Clop’s main objective is to encrypt all files in an enterprise and demand a ransom to unencrypt. Clop runs on Microsoft Windows and targets the entire system instead of a single computer, and is also used as a final payload by the TA505 or EvilCorp group. The malware encrypts files and adds the .clop extension, and generates the ClopReadMe.txt and ransom demand in every file. Clop is transmitted via digitally signed executables to make them seem legitimate, and also infected email attachments. It stops 663 Windows processes which makes for harder detection and removal. Then it creates a batch file “clearnet-workdns_11-22-33.bat” that disables Windows’ automatic startup repair, removes shadow volume copies, and resizes them. 
+
+Mitigations strategies are like most other ransomware: be vigilant while browsing or downloading, keep patches up to date, be cautious with emails, and have a strong endpoint security solution. 
+
+Brought to you by Carbon Black, as long as I have a decent CPU. 

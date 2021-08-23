@@ -1,0 +1,21 @@
+11/16/2020                                                                                                                                3
+
+
+What are the pros and cons of passive vulnerability scanning and active vulnerability scanning, with examples of techniques used to perform each scan.
+
+Active scanning- one of the most important measures in cybersecurity that gets an overview of ongoing processes and to check the health of online systems. 
+The pros- Active scanning sends test traffic into the network and queries individual endpoints that accelerates data collection. This can be very effective in collecting basic profile information such as device name, IP address, NetFlow or Syslog data, and more detailed configuration information such as make and model, firmware versions, installed software/versions and operating system patch levels.
+
+The cons- By sending packets directly to endpoints, however, this increases the risk of malfunctioning endpoints by sending incompatible queries or saturating smaller networks with high volumes of traffic. Also, active scanning does not normally monitor the network 24 hours a day, so it may not detect temporary endpoints or listen-only devices. Disadvantages happen more often when applied to operational technology environments. especially the control software, and are often not prepared to perform their tasks while receiving and returning traffic. The danger is that the controllers become overloaded with signals and no longer know what their actual task is.
+
+An example would be using a TCP Connect port scan which completes the TCP 3-way handshake.
+
+Passive Scanning- A passive scan silently analyses network traffic to identify endpoints and traffic patterns.
+
+The pros- This does not generate additional network traffic and carries almost no risk of disrupting critical processes by interacting directly with the endpoints. Many OT systems are proprietary and react more sensitively to external influences making passive scans more likely to be the go-to scanning method performed.
+
+The cons- Passive monitoring may take more time to collect asset data because it must wait for network traffic to or from each asset to generate a complete profile. Sometimes, not all areas of the network are available, which can limit the ability to passively monitor traffic across the entire OT environment.
+
+An example would be a stealth port scan because it sends a packet with the FIN flag and does not expect a response. If a RST flag is received, that means the port is closed.
+
+Question of the Day: In-depth Answer, brought to you by Computer system redundancy- if you fail to plan for a backup, then you plan to fail.

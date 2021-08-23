@@ -1,0 +1,11 @@
+12/16/2020                                                                                                                                
+
+What is X.500, what was originally developed as an alternative, and what type of entry has a unique identifier for a specific resource that contains attribute=value pairs?
+
+X.500 is a directory protocol standard developed to provide an international standard for directory systems. The protocol uses the X.509 Public Key Infrastructure (PKI) specification as digital certificates for authentication; and the protocol provides for database replication on multiple servers.
+
+Lightweight Directory Access Protocol (LDAP) was designed to be an alternative to the client side protocol of DAP (X.500) by simplifying the protocol and lessening the load on clients to support DAP. It let clients use TCP/IP networks to connect to intermediate servers, then connect to X.500 servers using Directory Server Protocol (DSP) over OSI networks.
+
+A distinguished name in a X.500 directory and similar, identifies a resource by attribute=value pairs, separated by commas. The attributes are listed in the concatenation of selected attributes from each entry (RDN- Relative Distinguished Name) in the tree along a path, leading from the root down to the named entry, listed in order from most specific to broadest term.
+
+Brought to you by CHAP because we both know the secret.

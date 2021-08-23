@@ -1,0 +1,19 @@
+7/16/2021
+
+
+What is a Kubernetes cluster? What is a pod? If you had 3 Raspberry Pis, how could you build a cluster, and deploy a pod?
+
+
+Kubernetes is an open source platform for container management. It helps to automate the deploying, managing, and scaling of containerized applications. Google developed Kubernetes after developing their internal platform and Kubernetes predecessor, Borg.  In 2015, Google donated the Kubernetes project to the Cloud Native Computing Foundation (CNCF), which is a vendor neutral space for open source projects developed to advance container technology. A Kubernetes control plane contains processes that assign tasks to the nodes (nodes are machines/virtual machines that perform the control plane tasks).
+
+
+When you run Kubernetes, you are running a cluster. A cluster consists of a control plane and one or more nodes/compute machines. The control plane maintains the state of the cluster by managing what applications are running and which containers are used, and the nodes run the applications and workloads. A Kubernetes cluster allows for the scheduling and running of containers across a group of machines, since the Kubernetes containers are not tied to just one machine. The desired state of a Kubernetes cluster is defined in a JSON or YAML file that states what applications to run and how many replicas are needed. This is managed with the Kubernetes API or the command line using kubectl.
+
+
+A pod is the smallest Kubernetes object. It is a deployment of 1 or more containers on a single node/machine. A pod is a single instance of a running process in the cluster, that can be thought of as a logical host that contains the systemic needs of the application for which it caters. A pod is meant to run a single instance of an application on the cluster, and is ephemeral (lasts for a short time/not forever).
+
+
+If you had 3 Raspberry Pi, you would probably install them on a rack. Each Pi will need an Ubuntu server image to be downloaded and the ability to SSH into them will also be required. Once done, the control groups (c-groups) will need to be enabled and configured. Following that, the Microk8s snap can be installed on all Pi boards. Select one to be your master node of the cluster and run the command [sudo microk8s.add-node]. Finally, on the other two Pi, run the join command to add them to the cluster [microk8s.join <master_node_ip>:<port>/<token>].  Then within the workload resource controller, Deployments, you can use a PodTemplate to make the pod. 
+
+
+Brought to you by Kubernetes: I don”t always deploy it, but when I do, it's a real cluster.

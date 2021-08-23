@@ -1,0 +1,48 @@
+8/13/2021
+
+
+What is an array in programming and why would it be useful? Create a simple foreach script in Powershell (or a for loop in Bash) with an array of 5 URLs.
+
+
+*It is worth mentioning that if you try this in Powershell on your home host machine, you should run as an administrator and may have to turn on scripting permissions with this command: Set-ExecutionPolicy unrestricted
+
+I would advise that after you have your fun, turn restrictions back on with this command: Set-ExecutionPolicy restricted. 
+
+An array in programming is a variable that usually contains data of the same type such as integers (1 2 3 4 5) or strings (Car Cat Cab). Every array has an index number associated with each element, starting at zero. There is no maximum size to these arrays, and so this makes accessing an element in a large data set easy by using its index number. 2D arrays involve matrices, but for my answer, I will stick to a 1-dimensional array for simplicity. 
+
+
+Making an array with URLs is useful for me because as a tutor/TA I need certain pages open at the same times every day. I can create a script that opens them, and set it to execute at specific times with a cron job.
+
+
+Bash script:
+
+
+#!/bin/bash
+
+
+xdg-settings set default-web-browser firefox.desktop
+
+
+url_array=(
+    https://www.google.com/
+    https://www.facebook.com/
+    https://www.linkedin.com/
+    https://www.wikipedia.org/
+    https://www.kickassfacts.com/
+)
+
+
+for i in ${url_array[@]}
+do
+    xdg-open $i
+done
+Powershell script:
+
+
+$url_array = @(
+    'https://www.google.com/', 
+    'https://www.facebook.com/', 
+    'https://www.linkedin.com/', 
+    'https://www.wikipedia.org/', 
+    'https://www.kickassfacts.com/'
+)

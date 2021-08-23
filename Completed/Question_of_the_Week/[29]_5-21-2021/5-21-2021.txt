@@ -1,0 +1,28 @@
+5/21/2021
+
+
+What are some vulnerabilities of cron jobs on Linux? What about some vulnerabilities of Windows Task Manager? Are there any best practices or mitigations of the vulnerabilities of the two? 
+
+
+On Unix-based systems, Cron is a job scheduler that is used for automating system administration tasks, running malware scanners, checking for updates, or running scripts. Each user can have different copies of cron jobs that are fully customizable. Improperly configured cron systems or cron jobs can lead to big security risks. For system-wide cron jobs, Cron runs as root when executing from /etc/crontab. This means that if the crontab calls any commands or scripts to run, it is running as root as well. This can be exploited by an unprivileged user by editing a script (or an insecure script, ex: wildcard injection) used by Cron, to escalate their privilege, and waiting for it to execute. Usually, malicious cron jobs are set to run when a host’s owner is away or asleep. 
+
+
+Another vulnerability is the creation of backdoors with cron, using PHP (PHP: Hypertext Preprocessor) to set their backdoors at a deeper level. This can be done with the shell_exec function which allows plain shell commands through a web application to maliciously edit the crontab (ex: /var/spool/cron/crontabs/www-data).
+
+
+Lastly, simple human mistakes make cron vulnerable. 
+
+
+Mitigation: Restrict Cron usage to only those that are admins or need the privilege. Have monitoring services set up like OSSEC and such to monitor metrics and alert when jobs take longer than expected. Also, monitor jobs that may usually go unnoticed like dynamic DNS updates, backups, server reboot, and antivirus scanning. Additionally, Cron is old, so it might be better to use a more dynamic automated scheduling tool that has a gui and better ease of use.
+
+
+Microsoft Windows Task Scheduler has front-end components that allow for a user interface, and a back-end service that runs with SYSTEM privileges. One of the libraries it uses is schedsvc.dll, which has a function that sets permissions of job files. Exploitation of the legacy schtasks.exe and schedsvc.dll will allow an attacker to take advantage of high privilege when setting file permissions. The legacy versions of schtasks.exe migrate old job files, from Windows versions prior to Vista in the %Windir%\tasks directory, to the %Windir%\system32\tasks directory, when those program versions are executed on modern platforms. This can be used with hard links (a directory entry that is associated with a file on a system) to grant full permission over protected files.
+
+
+Mitigation: Use the Enhanced Mitigation Experience Toolkit (EMET) with Windows Security app, or exploit protection with Windows defender to protect against malware that uses exploits to infect and spread. Defenders can periodically implement the MITRE ATT&CK Schedule Task detection rule strategy to automatically alert if tasks are created or deleted in the environment.
+
+
+Using tools that already exist in the environment to plan and execute an attack is called living off the land.
+
+
+Brought to you by living off the land: If you have it, I can use it.

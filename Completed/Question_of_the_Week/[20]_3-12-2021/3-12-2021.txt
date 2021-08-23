@@ -1,0 +1,79 @@
+3/12/2021                                                                                                                                20
+
+What are some common HTTP request methods, what does the anatomy of an HTTP response (and any request methods you enter) look like, how can you create and edit headers, and what are common response codes (and their description)?
+
+
+Some common HTTP request methods include POST- to create new subordinate resources, GET- to read or retrieve a representation of a resource, PUT- to update/replace capabilities and even create a resource , PATCH- to update/modify capabilities and contains only the changes needing to be made to a resource, DELETE- to delete a resource, and HEAD- to retrieve an Uniform Resource Identifier (URI) without the response body
+
+
+To execute the requests, using curl, will look like:
+POST- curl -X POST -d name=<name> -d age=<age> http://<Website>.com/user 
+The -X tells cURL to execute a POST request, the -d allows you to provide data.
+
+
+GET- curl https://www.<Website>.com/
+
+
+PUT- curl -X PUT -d name=<name> -d age=<age> http://<Website>.com/user/1
+
+
+PATCH- curl -X PATCH -d age=<age> http://<Websilte>.com
+
+
+DELETE- curl -X DELETE http://<Website>.com
+
+
+HEAD- curl -I https://www.<Website>.com
+
+
+
+
+The anatomy of a response will look similar to:
+The HTTP Response Header- contained from protocol version to connection.
+
+
+HTTP/1.1 200 OK  -This is the protocol version that the web server is using
+Set-Cookie: JSESSIONID=<sessionid>; Path=</path>
+Content-Type: text/html -The content-type value is a MIME type (Multipurpose Internet Mail Extension) that tells the browser the kind of data the browser is about to receive, to be able to render it.
+Content-Length: <number>
+Date: <day, day number, month, year, hour:minute:second, time zone>
+Server: <apache, etc/version>
+Connection: <open/close> 
+
+
+The Body- contains the HTML or content to be rendered.
+<html>
+...
+</html>
+
+
+A HTTP Request is similar in structure to a response with a head and payload; a start-line describing the request, or status, optional HTTP headers, blank line for meta-information for the request, and an optional body for content. 
+
+
+There are chrome extensions like Modify Header Value and ModHeader that allow for adding/modifying/removal of headers and enabling header modification based on URL/resource conditionally. 
+
+
+Response codes fall under 5 categories:
+1xx: Informational
+2xx: Success
+3xx: Redirection
+4xx: Client Error
+5xx: Server Error
+
+
+Common status codes include:
+200 OK- the request succeeded.
+301 Permanent Redirect- URL needs to be permanently redirected to another.
+302 Temporary Redirect- Visitors are passed to a new page, but the link equity may not be passed along.
+400 Bad Request- HTTP request was sent to server as invalid syntax.
+401 Unauthorized- a user trying to access a resource has not been authenticated or been authenticated correctly.
+403 Forbidden- a user made a valid request, but the server refuses to serve that request, because of lack of permission to access the resource.
+404 Not Found- a user is able to communicate with the server, but is unable to locate the requested resource.
+410 Gone- The page is no longer available from the server and no forwarding address has been set up.
+500 Internal Server Error- server cannot process the request for an unknown reason.
+502 Bad Gateway- server is a gateway or a proxy server, and is not receiving a valid response from the backend servers that would fulfill the request.
+503 Service Unavailable- server is overloaded or under maintenance.
+504 Gateway Timeout- same as Bad Gateway except the backend servers have not responded within the allowed time period. 
+
+
+Brought to you by: tcpdump- when you have to, then you have to.

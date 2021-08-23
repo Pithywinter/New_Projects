@@ -1,0 +1,19 @@
+8/9/2021
+
+
+If I run on my Linux the command sudo ss -tulwn | grep LISTEN( or for an older version, netstat -tulpn | grep LISTEN ) what does that command do? How is it helpful? What would the command be for a Windows OS?
+
+
+Netstat is a command that can help identify network connections and which sockets are listening for incoming connections. It is usually used for troubleshooting, though is now considered outdated and is no longer recommended by Linux. The ss command is the newer command offered by iproute2 and is similar to netstat, but is faster and shows more tcp information. 
+
+For netstat, -t is looking for tcp connections, -u is looking for udp connections, -l is looking for all listening sockets, -p lists the process that opened the socket, and -n shows numerical addresses/do not use DNS. Grepping for LISTEN should verify if there are started services that are supposed to be listening on a particular IP:Port/ filters out ports in the LISTEN state 
+
+
+For ss,  -t is looking for tcp connections, -u is looking for udp connections, - l is for listening sockets, -w is for raw sockets, and -n for showing bandwidth values/ do not use DNS.
+
+
+For Windows, netstat has been used for a long time. You might use a command like netstat -bano | findstr “LISTENING”. 
+-b lists applications that are associated with each connection, -a displays all inactive and active connections/tcp and udp ports currently listening, -n displays addresses and ports in numerical form, and -o displays the Process ID (PID) for each connection. findstr is the windows version of grep. 
+
+
+Brought to you by: preventing children from pulling out your fiber connection.

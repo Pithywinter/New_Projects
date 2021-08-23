@@ -1,0 +1,17 @@
+3/18/2021                                                                                                                                21
+
+
+Using the same tools and techniques that an attacker would use for reconnaissance, build a target profile of yourself. What did you use, how did you build your profile, and did you find? (general, not specifics)
+
+An attacker will gather information on a target before constructing the weapon to use against them. This can be done by snooping, checking out the social media of a target for locations, friends, family, companies, time of events, and interests. Using these interests (ex: coffee shops), time of events or calendar, and location, an attacker can arrive at a target’s favorite coffee shop on lunch break and stand in line to look at the attacker's phone, while they are on it. If the target has a laptop, the attacker could watch the screen. If the target brought co-workers and were talking about work, the attacker could pretend to work on their machine with earpods in, and just listen to the conversations. If the target is working on their device on work related material, the attacker could sniff wireless traffic for data. Google dorking the target can reveal data. With a username or email address, the attacker can use the OSINT Framework to uncover more information about other sites that the target belongs to. If the target is on Twitter, the attacker on a linux could use the twint command to check for tweets the target sent, city the tweets were near, and a list of people the target follows. The attacker could use hunter.io to search companies who may have records of the target’s email. Near the target's work or home, the attacker could dumpster dive for more information as in most states, trash is public domain. After that, a spear fishing or even whaling attack can easily be constructed.
+
+
+Since I cannot snoop on myself, I started from my main social media site to see what information I could gather. 
+Name, place of business, work history, contacts, github url, general location, interests, and with a little conversation, my email address. 
+
+
+Using the OSINT Framework, my username was on 50 social network sites, and one of my emails had 3 data breaches.
+That would be more than enough information to craft a spear phishing email to look like a social media email in the hopes I would click on a link. Suppose that happened, and now I am directed to the social media’s login page and I enter my credentials. The attacker now has my email, username, password, and IPaddress. From there, finding my network, scanning my ports, and crafting another weapon to attack my data would be easy. That is just one option.
+
+
+Brought to you by: Layer 7 of the mnemonic device, “Please Do Not Throw Sausage Pizza Away”. 

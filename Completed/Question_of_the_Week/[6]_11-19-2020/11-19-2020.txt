@@ -1,0 +1,27 @@
+11/19/2020                                                                                                                                6
+
+
+What is S/MIME and how is it different from TLS?
+
+
+Secure Multipurpose Internet Mail Extension refers to an email signing protocol that is used to increase email security. S/MIME certifications enable users to 1) prove the actual sender of an email through a timestamped digital signature, and 2) encrypt and decrypt the content of their emails, and 3) facilitate secure document sharing across networks by ensuring file integrity.
+The way the digital signature works is as follows:
+* A digital signature is generated using a private key and authenticated using a public key.
+* The public key is sent with the S/MIME protected email — this verifies your identity when the recipient opens the email
+* Your private key applies your unique digital signature to each email and repeats the process.
+S/MIME (encryption) entails that your email data — MIME data — is encrypted before it transmits from point A to point B (to/from a web server and email client).The encryption is done using a public key and the content of the message is then decrypted using the recipient’s corresponding private key. This at-rest and in-transit data protection helps prevent the messages from being “read” by people other than the intended recipients, by keeping the emails secure until the intended recipient with the private key decrypts it.
+
+
+Although S/MIME is supported by many email clients, it has not been widely implemented because it was too cumbersome for general users to implement. Part of this is due to the fact that both the sender and the recipient need to have S/MIME certificates to encrypt and decrypt one another’s messages using public and private keys. However, S/MIME adoption is increasing due to automated tools for implementing and managing the certificates. 
+This helps:
+* Mitigate susceptibility to man-in-the-middle (MitM) attacks;
+* Prevent email spoofing;
+* Prevent business email compromise (BEC) scams by preventing attackers from reading your email content; and
+* Comply with regulatory compliance concerns that are outlined by General Data Protection Regulation (GDPR), Payment Card Industry (PCI) standards, Healthcare Insurance Portability and Accountability Act (HIPAA), and the U.S. Department of Defense’s Defense Acquisition Regulation Systems (DFARS).
+S/MIME certificates-
+1. Email validation — This process requires a valid email address and domain verification.
+2. Individual validation — This process aims to identify you individually as an employee. This requires your government-issued identification card (such as a driver’s license) and a valid company email address to issue an email signing certificate with your name on it.
+3. Organization validation — This process aims to verify that an organization is valid. It involves a phone call to your organization’s representative and verification of the existence of the organization, as well as its email domain, to issue a cert that indicates the name of the company. In this way, the process of getting an organizational validation S/MIME certificate is reminiscent of an organizational validation (OV) SSL certificate.
+Transport Layer Security encryption is useful in protecting data as it moves from server to server. In the form of TLS certificates, this encryption method is often used for securing content shared between an end user’s web browser and a website’s server through an encrypted channel. Similarly, for email, TLS is used to create an encrypted communication tunnel through which emails are sent. However, an issue with using TLS alone for email encryption is that it does not protect at-rest data; emails sitting on a computer or on an email server are still vulnerable.
+
+Question of the Day: In-depth Answer, brought to you by Zero Day: you never know it's happened until it's happened. 

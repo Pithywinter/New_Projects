@@ -1,0 +1,70 @@
+3/5/2021                                                                                                                                19
+
+
+What are the pros and cons of agile methodologies (and its alternative waterfall methodologies), and what agile framework is used by more than 54% of companies?
+
+For software projects, from the beginning, a methodology of clearly defined processes must be decided upon to ensure a high quality end product. The two most popular models, Waterfall and Agile, are decided on to see through completion of the software development life cycle (SDLC). Knowing and having different methodologies to choose from allows the development team to decide what process will work best for the project, to deliver a high quality product.
+
+
+Waterfall is a traditional model that is originally based on construction and manufacturing industry projects. It is a linear and sequential approach where after each completed step is reviewed, the project moves on to the next step down. When applied to software development, that means that tasks that are completed in a phase must be reviewed before moving on to the next phase. This methodology is used for completing one project, with a focus on project delivery. This methodology avoids scope changes after the start of the project, with the testing phase coming only after the build phase. This methodology requires a project manager who is essential in every phase. The phases of Waterfall are: Conception, Initiation, Analysis, Design, Construction, Testing, and Deployment.
+
+
+The pros:
+Due to the agreement on deliverables at the start, the project has straightforward planning and designing
+Better design with a whole system approach
+A defined scope of work
+Clear measurements of progress
+Easier costing
+Team roles are defined
+
+
+The cons:
+Rigid structure- disallows necessary changes
+No allowance for uncertainty
+Poor satisfaction due to limited customer engagement
+For large projects, the sequential approach is not ideal because the end result is too far in the future
+Testing is done only in the latter phases of the project
+
+
+Agile is more of an incremental type model of software development that is based on principles that focus on people, collaboration, results, and flexible responses to change. Agile grew out of Lean ( a methodology that is based on continuous improvement and respect for people), and became popular after the Agile Manifesto of 2001 due to the rise of massive, rapid change, growing complexity, and the shift in power in the marketplace from producer to consumer. Agile is not only in software, but also in manufacturing, retail, petroleum, strategy, human resources, budgeting, auditing, and in organizational culture. Eventually, Agile became more of a mindset than a methodology, allowing for home-grown terminology that made it easier for managers and staff to accept. However, applying Agile without acquiring the mindset can be a deterement. This can be seen in Scrum, where a Scrummaster (a controlling manager) makes demands that the team must follow, and does not cultivate the Agile mindset and instead achieves a more intense hierarchical bureaucracy under the name of Agile. That gives Agile a bad name. The Agile mindset includes: operational agility, strategic agility, an obsession on delivering value to customers as the way of an organization, presumably all work will be carried out by small self organizing teams (usually no more than 12 individuals), and a continual effort to topple bureaucracy and top down hierarchies so the firm operates as an interacting network of teams. The biggest firms that have used Agile to achieve business agility are: Amazon, Apple, Facebook, Google, Netflix, and Microsoft. For Agile, development is in small increments completed in iterations. Each iteration includes all of the SDLC phases to which a working product is delivered at the end, and after several iterations, a new or updated product is released. This methodology is used for completing many small projects, with a focus on customer satisfaction. This methodology allows for requirement changes at any time, with testing being done at the same time as development. This methodology enables the team to manage the project without a dedicated project manager. Agile works in time-boxed phases called sprints, which are usually about two weeks. At the beginning of each sprint, a list of deliverables are prioritized based on customer input. At the end of each sprint, the team and customer review/evaluate the work and make notes for future sprints. The phases of Agile are : Conception, Initiation and Analysis, Design and Construction, and Testing and Deployment.
+
+
+The pros: 
+Faster SDLC
+Predictable schedule
+Increased customer satisfaction
+Flexible to change
+Empowerment of team management
+Promotes efficient communication
+Ideal for non-fixed budget projects
+For stakeholders, they are less likely to incur a loss and are much more likely to remain relevant in the market space
+Developers discover new ways of solving problems while they tackle existing ones
+Debugging is a significant part of the development cycle, and ensures the finished project is functioning at its best
+
+
+The cons:
+Requires a high degree of customer involvement
+Assumes that every member of the team is completely dedicated to the project
+Can bring up cost with additional sprints if the sprint is not enough to accommodate all deliverables
+Co-location is recommended for efficient communication
+Lack of documentation during the development process due to major and minor changes being made, sometimes rendering documentation obsolete
+Customers and some members of the development team may demand more of the system each time it is improved, due to mismanagement of projects or inexperienced project managers
+The different members of the development team need to be available almost always
+Clients, stakeholders, and developers can opt out of projects, doing away with the project, or taking time to look for new members
+
+
+There are many offshoots of Agile methodology such as Scrum, Kanban, Extreme Programming (XP), Lean development, Scaled Agile Framework (SAFe), and Crystal, as well as other methodologies such as Spiral and The Rational Unified Process (RUP). Within many companies, Scrum is very often synonymous with Agile, and managers tend to associate Scrum to Agile when discussing Agile. It is reported that over 54% of organizations that adopt the Agile methodology use Scrum.
+
+
+Brought to you by: Rail fence -3:
+IenianVslsoil 
+li sp
+lnMrfdm
+t sno Nci anTclehe
+ df eennag eT l se p nBuIvov
+yno epo yn gi.
+en olpe pnn ieteSalfsso leigCide.
+eoyo l ob,Rtigfehadwrsd
+o ovnem gis
+h hleg.TeyasAdcl eetlv epi
+ie ln yfc.

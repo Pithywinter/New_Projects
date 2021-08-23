@@ -1,0 +1,26 @@
+11/20/2020                                                                                                                                7
+
+
+Name the commands based on the situation:
+
+I have a group of IP addresses and I want to see which server is available-
+
+
+I want to run a SYN scan against the server accepting connections-
+
+After I SSH into the server and check the hosts file, I discover 2 IP addresses with the same domain name. Command to look up IP address and check domain name (Windows and Linux)-
+
+I now want to check all the network configurations of the currently connected devices (Windows and Linux)-
+
+I want to remove write access to a file-
+
+I want to give full permissions over a file to the User, read and execute permissions to the Group, and read permission to Others by using absolute mode- 
+
+1) fping -g
+2) nmap -sS
+3) nslookup for Windows, dig for Linux
+4) ipconfig for Windows, ifconfig for Linux
+5) chmod -w
+6) chmod 754
+
+Question of the Day: In-depth Answer, brought to you by grep.

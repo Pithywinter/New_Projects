@@ -1,0 +1,44 @@
+5/12/2021
+
+
+What is the file that you would look into to verify that an account is locked out in Linux, and what is the indicator that an account is locked? What about in Active Directory?
+
+
+First, why would we want to lock a user’s account? If someone is changing positions or has a suspected compromised account, as an administrator for a Linux system you will need to do this from time to time. There a few different ways to lock an account in Linux:
+
+sudo passwd -l <password>        This inserts an ! at the beginning of the encrypted password field in /etc/shadow, keeping the password from working. 
+
+
+sudo usermod -L <user>        This does the same as above.
+
+
+sudo chage -E0 <user>        This makes a change to the /etc/shadow file in that it makes the eighth field for that user   (separated by colons)  have a zero, making the account expired, by expiring the days until a change to a password needs to happen. This is useful because when an account expires like this, even a passwordless secure shell (SSH) will not gain access.
+
+
+sudo usermod -s /sbin/nologin <user>        This assigns a nologin shell to a user, disabling access to Linux via SSH.
+
+
+sudo usermod -s /dev/null <user>                This changes the shell to make information disappear, disabling the user.
+
+
+sudo usermod -s /bin/false <user>        This changes the shell by using a binary to immediately exit, returning false, disabling the user. 
+
+
+The user accounts can be checked in the /etc/shadow file. An unlocked account will show a $ after the account name. A locked account will have a !! after their name separated by a colon. If locked by usermod -s, changes to the user account can be seen in the etc/passwd file.
+
+
+For Windows active directory, Event ID 4740 is created on workstations, Windows servers, and domain controllers when an account gets locked out by activating the account lockout threshold. These can be seen using active directory monitoring tools like Solarwinds, Netwrix, etc.
+
+
+For Windows accounts, you can go to Settings > Accounts > Family & other users tab > account name under Other users> Change account type to change accounts to Administrator or Standard. Also, to disable an account, you can go to Start > Computer Management > System Tools > Local Users and Groups > Users > select the account to disable > General tab > check the Account is disabled option 
+> Apply > OK.
+
+
+In command prompt:
+net user <username> /active:no        The disabled account will not be listed on the sign-in screen.
+
+
+In Pro editions of Windows, the Group Policy tool can disable items that users would use.
+
+
+Brought to you by a strong IPv6.

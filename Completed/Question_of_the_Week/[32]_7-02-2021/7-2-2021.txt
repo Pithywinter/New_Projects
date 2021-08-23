@@ -1,0 +1,25 @@
+7/2/2021
+
+
+What is a X. 509 certificate and what are the importance of SSL certificates?
+
+
+A X.509 digital certificate is based on the X.509 standard from the International Telecommunications Union (ITU). It began as an authentication framework on November 25, 1988, and now is in its ninth version. Also, the Internet Engineering Task Force (IETF) adapted the X.509 version 3 certificate to make its own Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CLR) Profile standard Request for Comments (RFC 5280).  The X.509 standard explains the format of public key infrastructure (PKI) certificates. The X.509 certificate is built around a related public and private key, ensuring confidentiality and integrity. This certificate can be used for application security and digital signatures, but is most commonly used for enabling secure web browsing (HTTPS) with Transport Layer Security/Secure Socket Layer (TLS/SSL). This certificate allows users to trust that the certificate owner or domain/hostname is validated. 
+
+
+SSL certificates are issued by a Certificate Authority (CA), like DigiCert or Sectigo, among others. These are used to verify the identity of a website owner, ensure all data between the user and website owner is encrypted, and ensure the data is secured safely and privately. Having a SSL certificate is one of the primary requirement steps to becoming Payment Card Industry (PCI) compliant. Also, since 2018, Google has flagged websites that do not have a SSL/TLS certificate installed on the website, and have pushed these websites further down on their search rankings. There are three types of certificates:
+
+
+Domain validated: Only verifies the website’s owner. (This is most used by scammers.)
+
+
+Organizationally validated: Verifies the organization’s name, location, and domain. (These are for websites that have transactions with low levels of risk.)
+
+
+Extended validation: Must go through a thorough review process to obtain. (This is the highest level of security for businesses handling highly sensitive information and data.)  
+
+
+The CA (having proven their trustworthiness) can have different root certificates. These root certificates live on a major browser’s root store (also every device comes with pre downloaded root certificates and private keys in its root store, and what store will be used is what is native to the OS).  Any further certificates it issues are automatically trusted. To add layers of security, the CA does not issue end user SSL certificates off its roots. Instead they issue an intermediate root, which is signed with the CA’s private key, making it trusted. Then, the CA uses the intermediate root certificate’s private key to sign and issue end user SSL certificates. 
+
+
+Brought to you by: turning off your device and turning it back on again.

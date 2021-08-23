@@ -1,0 +1,16 @@
+11/18/2020                                                                                                                                5
+
+
+What are the AAA of security?
+
+Authentication, Authorization, & Accounting
+
+Authentication describes a network or application's way of identifying a user, and ensuring the user is who they claim to be. Each user must have an unique set of identification information before being granted access. This is established via passwords, single sign-on systems, biometrics,digital certificates, and public key infrastructure. Authentication verification can be summed as something you are, something you have, something you know,something you do, and somewhere you are. When a user has been authenticated, they must gain authorization to complete tasks and issue commands. All activity from the user can now be logged with the user's authorisation credentials.
+
+Authorization is the process of enforcing policies like determining the quality of activities, resources, or services a user is permitted to use. Here the user is assigned authorization levels that define their access to a network and associated resources. Authorization enforces restrictions.
+
+Accounting measures the resources a user accessed, at what time, by whom, and what commands were used. Usage information is used for authorization control, billing, trend analysis, resources utilization, and capacity planning. A restriction of this component is that it requires an external AAA security server to store accounting records. Non-repudiation occurs when proof has been established that someone has taken an action.
+
+AAA security enables mobile and dynamic security. Without it, a network must be statically configured to control access. IP addresses must be fixed, systems cannot move, and connectivity options must be well defined. To mitigate network, software, and security threats, a strong practice of AAA security is needed.
+
+Question of the Day: In-depth Answer, brought to you by ACLs- Whether you use Numbered, Named, Standard, or Extended; a network attack without an ACL can be BAD.

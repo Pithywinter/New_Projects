@@ -1,0 +1,12 @@
+12/9/2020                                                                                                                        9
+
+
+What is System on a Chip (SoC) and what is its security concern?
+System on a Chip is an integrated circuit that takes a single platform and integrates an entire electronic or computer system onto it. SoC general components include a central processing unit, input and output ports, internal memory, as well as analog input and output blocks. Depending on the system it can perform a variety of functions including signal processing, wireless communication, artificial intelligence, among others. The goal of SoC was to reduce energy waste, save on spending costs, as well as reduce the space occupied by large systems. SoC is frequently used in systems pertaining to the Internet of Things, embedded systems, cameras, smartphones, cars, tablets, and smartwatches.
+
+The security concern surrounding System on a Chip is data loss.  Some other concerns are permission and privileges, resource management, illegal states and transitions, reverse engineering, buffer issues, numeric exceptions, malicious implants, exploitable bugs, and malicious hardware intrusion.
+
+
+Assertion-Based Verification (ABV) is a common practice for functional validation of System On-Chip (SoC) designs. By adding vulnerability analysis before assertion generation, security can be implemented into the design. 
+
+The Question of the Week: In-depth Answer is brought to you by RFC1918 addresses: If you like your packet flow private and internal, do it with RFC1918.

@@ -1,0 +1,14 @@
+3/31/2021                                                                                                                                22
+
+What is CVE, who oversees it, and how are CVE IDs assigned?
+
+CVE stands for Common Vulnerabilities and Exposures. These are publicly disclosed computer security flaws overseen by the MITRE corporation. The technical data that includes risks, impacts, and vulnerabilities are in other databases like the CERT/CC Vulnerability Notes Database and the U.S. National Vulnerability Database (NVD), and not in CVE entries. CVE entries are short and are given an identifier, which helps to separate unique security flaws from one to another.
+
+
+CVE IDs are assigned by a CVE Numbering Authority (CNA), of which there are around 100. These represent research organizations, major IT vendors, security companies, and MITRE. A CNA is issued blocks of CVEs that are kept in reservation to attach to new issues when discovered. One complex issue can accumulate hundreds of CVEs. A CVE ID contains a brief description and includes references. Commonly, a CVE ID is assigned and security flaws are kept secret until a fix has been developed and tested. This is so attackers have diminished opportunities to exploit unpatched flaws. The format of a CVE ID is like “CVE-(YEAR ISSUED)-(NUMBER ID)”, a brief description of the vulnerability or exposure, and references that can include links to the report and advisories. 
+
+
+To qualify as a CVE, a flaw must be independently fixable, documented or recognized by the affected vendor, and affecting one codebase. Common Vulnerability Scoring System (CVSS) is one of the ways to evaluate the severity of a vulnerability, but there are others. With CVSS, scores range from 0.0 to 10.0, with higher numbers representing higher severity of the vulnerability.
+
+
+Brought to you by: TCP Traffic- tl;dr   SYN - ACK - FIN 

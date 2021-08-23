@@ -1,0 +1,14 @@
+
+1/7/2021                                                                                                                                12
+
+What is WPA3, what handshake did it replace, and how does it work?
+
+WPA3 is the successor to the Wi-Fi Protected Access (WPA) standard and WPA2. WPA2 protocol, with the Advanced Encryption Standard (AES), patched some of the major vulnerabilities of WPA. While still widely used, a major vulnerability of WPA2 is in the brute forcing of the WPA2-Personal passphrase. WPA3 is only allowed to use AES, has perfect forward security, and has a new authentication method called the Dragonfly handshake, also known as Simultaneous Authentication of Equals (SAE), that replaced the Pre-Shared Key (PSK) method used in WPA and WPA2. WPA3-Personal is a more individualized encryption on the network as it disallows snooping on other WPA3 networks, and, even if an attacker guesses the password, they would not be able to see any exchanges to determine the session keys. Also, any information captured prior to the cracking cannot be decrypted. WPA3-Enterprise has an optional 192-bit security mode for better security with larger organizations.
+
+Dragonfly/SAE is a key exchange using discrete logarithm cryptography that authenticates using a password or passphrase. It uses a handshake that is similar to a Simple Password Exponential Key Exchange (SPEKE) where only the ones who know the password can produce the private group generator based on Elliptical-curve cryptography (ECC). SAE using Ecc works like this:
+
+Two people share a password. Using hash functions, key derivation functions, and hunting and pecking techniques they derive a point on the elliptical curve with a known transformation. They each randomly pick a value in the domain of the original password. They exchange and both compute the key like normal in the Diffie-Hellman key exchange. 
+
+They can authenticate each other, at the same time, independent of any role. This makes an active, passive, or an online dictionary attack very hard to do.
+
+Brought to you by Zero knowledge proof (ZKP). I know the value x, and that’s all you need to know. 

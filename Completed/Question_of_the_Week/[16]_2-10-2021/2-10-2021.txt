@@ -1,0 +1,33 @@
+2/10/2021                                                                                                                                16
+
+
+What is Defense In Depth (DiD), why was DiD implemented, and what do effective controls and strategies look like?
+
+Defense in Depth is an information security focus that contains controls and security mechanisms put in place throughout a computer network to protect the confidentiality, integrity, and availability (C.I.A.) of the network and the data it contains. These mitigations can harden network security against many attack vectors. This is also known as a “castle approach” because castles depended largely on an interwoven system of protections. A DiD strategy helps to ensure that network security is redundant and significantly increases the time and complexity to successfully compromise a network. This approach is routinely used in physical security when protecting material assets or valuable equipment. The three control strategies of DiD are Physical access, Technical controls, and Administrative policies. The layers that DiD is applied to are to the perimeter, network, host, application, and most valuably, the data.
+
+
+DiD was conceived by the National Security Agency (NSA) in 2010. It was developed and implemented because of the increase and persistence of data breaches to businesses that caused millions in damages, and theft of confidential information and customer data. Poor network defences in almost every industry sector in 2020 were victims of malware attacks, phishing, and human errors. There has also been a progression from single attacks like brute forcing passwords to intricate multi-faceted threats like DDoS attacks with multiple IoT devices. Lack of security awareness in professional employees has led to several attacks worldwide, and the need for students pursuing a career in IT or cybersecurity to understand network security practices was made known. 
+
+
+
+
+Some effective controls look like:
+
+Video surveillance, security sensors, and security analytics solutions.
+Firewalls for controlling traffic and detecting malicious activity.
+IDS/IPS for sending alerts when malicious activity is detected (IDS), and preventing and alerting identified malicious activity (IPS).
+Endpoint Detection Response (EDR) like an antivirus solution that runs on rulesets or heuristics.
+Network segmentation for splitting a network into sub-networks, with network switches and firewall rules, designed around business needs.
+Construct a visibility fabric through network packet broker appliances and virtual agents, with network tapping.
+Encryption and VPN to protect confidentiality.
+Identity and access management.
+The Principle of Least Privilege is a policy and technical control for assigning users, systems, and process access to resources that are only necessary to perform their assigned function. 
+Strong passwords with multi-factor authentication for any account with value.
+Patch management for applying updates to an operating system, software, hardware, or plug-in to address identified vulnerabilities. 
+User education for password hygiene, proper data disposal, secure data storage, and incident reporting.
+
+
+Looking at DiD as a market driver in 2021, eGRC is at $38 billion, IoT Security is at $37 billion, and Incident Response is at $30 billion, just to name a few.
+
+
+Brought to you by the Internet of Things since 2008.  

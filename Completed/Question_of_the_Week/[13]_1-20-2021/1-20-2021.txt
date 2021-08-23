@@ -1,0 +1,36 @@
+1/20/2020                                                                                                                                13
+
+How would you detect a SQL injection, where do most SQLi vulnerabilities happen, and what is a common SQLi attack string used for the username and password field on forms?
+
+To detect a SQL injection, a web application vulnerability scanner would be used, like Burp Suite.  Burp Suite scans the web application from the outside and looks for vulnerabilities like Cross-site scripting, SQL injections, insecure server configuration, Command injection, and Path traversal by referencing a database of known flaws, packet construction anomalies, coding bugs, potential paths to sensitive information, and default configurations. A large amount of SQLi vulnerabilities can be discovered quickly with Burp Suite’s web vulnerability scanner.
+
+A manual detection of a SQL injection can be done using a systematic set of tests against every entry point of the application. This can be done by:
+        Entering the single quote character ( ‘ ) and looking for errors and anomalies.
+        Using SQL syntax to evaluate the base value of an entry point, and a different value, looking for systematic differences in the application responses.
+        Entering Boolean conditions like 1=1 or 1=2, and looking for differences in  application responses.
+        Submitting payloads created to trigger time delays when executed within a SQL query, and looking for differences in time taken to respond.
+        Submitting Out-of-band security testing (OAST) payloads designed to trigger an out-of-band network interaction when executed with a SQL query, and looking at the resulting interactions.
+
+A majority of SQLi vulnerabilities are First-order SQL injections found within the WHERE clause of a SELECT query. First-order SQLi happens where the application receives user input from an HTTP request, and while processing the request, incorporates the SQL query unsafely. Although, they can appear in any location within the query like:
+        UPDATE statements within the updated values or the WHERE clause
+        INSERT statements within the inserted values
+        SELECT statements within the table or column name
+        SELECT statements within the ORDER BY clause
+
+Second-order SQL injections happen when the application receives user input from an HTTP request and stores it for future use. This is also known as stored SQL injection. This usually happens by placing the input into a database, but no vulnerability arises at the point where the data is stored. Sometime later, when processing a different HTTP request, the application retrieves the stored data and incorporates it into a SQL query in an unsafe way. 
+
+A common command to use in the username and password fields is ‘ OR 1=1 --’
+This injects code into the back-end database. The condition is always true because one equals one, and this makes the password verification never happen. If the web application is vulnerable, the back-end database accepts this as always true and will dump the contents of the database. 
+
+Brought to you by:
+
+#! /bin/bash
+
+$wj=witty_joke
+
+if [[ $wj == ‘true’ ]] ; then
+        find / -type f -iname “witty_answer.*” | cat witty_answer.txt | grep “anything”
+        else
+        find / -type f -iname “hang_head_in_shame.JPG” | eog hang_head_in_shame.JPG || exit
+fi 
+

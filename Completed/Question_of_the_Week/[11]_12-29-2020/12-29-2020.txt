@@ -1,0 +1,16 @@
+12/29/2020                                                                                                                                
+
+
+What are MD5 and SHA1, what are the differences between the two, and what is preferred on government systems?
+
+MD5 stands for MD5 Message Digest Algorithm, and is a cryptographic hashing function that is the third version of its kind. The first, MD2 (1989), was designed to work on 16-bit processors and took any plaintext message and made a 128-bit hash to secure the data. Next, MD4(1990), was developed for 32-bit computers, but in 2005 the first full attack against MD4 was published and MD5 was produced. MD5 (1991) addressed the problems of MD4 using 4 variables of 32-bit length in a round-robin fashion to generate the value for the hash. MD5 is still widely used despite extensive vulnerabilities such as collisions within seconds from two distinct messages hashing at the same value. 
+
+
+SHA-1 stands for Secure Hashing Algorithm 1(1995), replaced MD5, and is a cryptographic hashing function that produces a 160-bit hash value. The message is usually a hexadecimal number rendering of 40 digits. While slower, it was preferred over MD5 for security. It was designed by the United States National Security Agency as an U.S Federal Processing Standard (FIPS). FIPS was developed by the National Institute of Standards and Technology. In 2005, SHA-1 became considered insecure, especially against well funded adversaries, and by 2017 many browsers have stopped accepting SSL certificates. 
+
+While once preferred by the government, SHA-1 has been replaced by SHA-2(2001) in 2010, and as an alternative SHA-3(2015). SHA-2 is the collective name of a family of algorithms and their hash value lengths in bits SHA-256, SHA-384, and SHA-512. SHA-3 is an alternative to SHA-2 but is only similar in that it is part of the same series of standards. SHA-3 is part of a larger cryptographic family, Keccak, and uses a new approach called sponge construction to randomly arrange, in a particular way, any amount of data that is input or output. SHA-2 and SHA-3 are seen as a way to improve the NIST’s overall hash algorithm toolset, because while slower than SHA-1 or MD5, SHA-2 has had no demonstration of significant collision attack, and SHA-3 is not a cryptographic hash and it can be directly substituted for SHA-2 in current applications if necessary.
+
+
+
+
+Brought you by Metasploit Pro’s HorizontCMSArbitrary PHP File Upload- check your default group settings.

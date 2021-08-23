@@ -1,0 +1,18 @@
+8/21/2021
+
+What are some strong, general firewall rules that can be applied to a home network or a business?
+
+For software firewalls: Installed on individual machines protecting against nefarious applications and malicious external traffic. This type usually comes pre-installed, and by default just monitors incoming traffic. These can distinguish between different programs on a machine.
+
+For hardware firewalls: Sits directly behind the router, and filters specific threats and restricts traffic to protect every machine on a local network.
+
+A good general practice for a business environment: 
+Having the firewall turned on, using sandboxing (sandboxing imitates the existing system, but is an isolated environment, where suspicious programs can be run safely), using an IPS to inspect and prevent malicious traffic from reaching the target system and their open ports, create a “Deny All” rule then add exceptions but avoiding “any” and “all” rules, review often for open ports, have a change management policy and alerts for when rules are changed, use a VPN when accessing the internal network from external internet, automatically isolate infected systems, default deny uploading of software with known vulnerabilities, block by default vulnerable service ports 139, 445, 137, 23, 69, 135, and deny internet access to administrative interface that manages the boundary firewalls.
+
+A good general practice for a home environment:
+Create a “Deny All” rule then add exceptions but avoiding “any” and “all” rules, use a VPN when accessing the internal network from the external internet, default deny internet connection to machines that do not need it, and when possible, specify destinations, ports, protocols and IPs. 
+
+Brought to you by packet jokes: 
+Knock, knock. A UDP packet. Who’s there? 
+All TCP packets have been converted to UPD during the pandemic to avoid handshakes.
+I would tell you an HTTP joke, but I am insecure.

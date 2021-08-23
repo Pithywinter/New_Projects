@@ -1,0 +1,19 @@
+4/28/2021
+
+How would you get executives to approve your cybersecurity budget request? What do you think executives should consider?
+
+
+I do not have enough experience to give a realistic and pragmatic answer. From what I’ve seen in my studies, the answer to these questions is divided into three categories: 
+Businesses should treat Cybersecurity as an insurance policy
+Leaders should focus on ROI vs risk with Cybersecurity
+Leaders should focus on how Cybersecurity will impact the front and back, totality of the business and the business’s customers 
+
+
+In camp 1, this is about showing leadership the risk of not making an investment in cybersecurity.
+In camp 2, this is about weighing whether a cybersecurity team or solution cost will be made back or not.
+In camp 3, this is about not taking a fear based approach, but a program approach to show value.
+
+
+I hope to get more experience to better answer this. What is very clear to me, is that there are a lot of solutions to try and reach the same goal. So, maybe the answer is more of a tool belt situation, where you try until you find what works best, for those leaders and that business.
+
+Brought to you by: proxycannon-ng, for all of your red team botnet needs.

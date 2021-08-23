@@ -1,0 +1,48 @@
+11/12/2020                                                                                                                                1
+
+
+- Define a Man-in-the-Browser attack, how an attacker carries it out, who it affects most, and the mitigation strategy needed.
+
+
+A Man-in-the-Browser attack is an internet threat, related to the Man-in-the-Middle cyber attack in that it intercepts & manipulates calls between the browser & its security mechanisms or libraries-on-the fly, where a Trojan Horse is the proxy that infects a web browser by taking advantage of vulnerabilities in browser security to modify web pages, modify transaction content, or insert additional transactions all secretly invisible to both the user & host web application. This attack will be successful regardless of whether security mechanisms such as Secure Sockets Layer/ Public Key Infrastructure and two- or three-factor authentication solutions are in place. 
+
+
+Related attacks: Man-in-the-Middle, Man-in-the-Mobile malware, & Boy-in-the-Browser.
+
+
+How it is done: 
+* The attacker deploys a Trojan that infects the computer software, either OS or Application.
+* The Trojan then installs an extension into the browser configuration, so that it will be loaded the next time the browser starts.
+* Some time later, the user restarts the browser.
+* The browser loads the extension, and the extension registers a handler for every page-load.
+* Whenever a page loads, the URL of the page is searched by the extension against a list of known sites targeted for attack.
+* The user logs in securely.
+* When the handler detects a page-load for a specific pattern in its targeted list, it registers a button event handler.
+* When the submit button is pressed, the extension extracts all data from all form fields through the Document Object Model interface in the browser, & remember the values.
+* The extension modifies the values through the DOM interface. 
+* The extension tells the browser to continue to submit the form to the server.
+* The browser sends the form, including the modified values, to the server.
+* The server receives the modified values in the form of a normal request.
+* The server cannot differentiate between the original values, or detect the changes.
+* The server performs the transaction & generates a receipt.
+* The browser receives the receipt for the modified transaction.
+* The extension detects the URL, scans the HTML for the receipt fields, & replaces the modified data in the receipt with the original data that it remembered in the HTML. 
+* The browser displays the modified receipt with the original details.
+* The user thinks that the original transaction was received by the server & authorized correctly.
+
+
+
+
+Who this affects most: This attack is considered the greatest threat to online banking.
+
+
+Mitigation: 
+* Some attacks can be mitigated by using an out-of-band transaction verification.
+* Trojans may be detected & removed by an antivirus software.
+* User account management: check for privilege escalation vulnerability, restricting user permissions, and look for bypass user account control opportunities.
+* Monitoring browser applications for process injections.
+
+
+
+
+Tonight's Question of the Day: In-depth Answer is brought to you by updating your computer-just do it.

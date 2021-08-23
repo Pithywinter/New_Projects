@@ -1,0 +1,39 @@
+11/17/2020                                                                                                                                4
+
+
+What is an ARP cache and a DNS cache, how can they be poisoned, what are the signs of poisoning, and how can the poisoning be mitigated?
+
+The Address Resolution Protocol is used to connect Network Layer 3 and Data-Link Layer 2 of the OSI model, by linking the IP address to the MAC address (Ethernet) of a machine, for communication with another device. Before it can communicate with another device, it must first resolve the hostname of the device with the DNS server. Once successful, it must resolve the IP address to the MAC address. The machine broadcasts to the local LAN an ARP request, asking who does the IP address belong to and what is the MAC address of the device. If the device responds with an IP and MAC address, the machine will put that entry of the two values into its local ARP cache, where it will stay until the entry has not been used and the ARP cache timeout expires. If the entry already existed in the machine’s ARP cache, The machine would search through its cache, find the corresponding address, and convert the format and packet length of the data request.
+
+There are two types of ARP entries: 
+
+Dynamic ARP entries- Most often used, the ARP entry from Ethernet MAC to IP address link is kept on a device for a period of time, as long as it is being used.
+
+Static ARP entries- Have to manually enter the link between the Ethernet MAC address and the IP address.
+
+
+ARP poisoning, also known as ARP spoofing, attempts to divert traffic from its original destination to an attacker instead. This involves sending forged ARP reply packets to a gateway over the local network. The forged packets tell the recipient device that the attacker’s MAC address should be connected to the IP address of the machine they are targeting. The device then updates its ARP cache with the attacker’s address, and now sends messages to the attacker. Now an attacker can read traffic, steal data, or continue attacking with a denial-of-service (by linking a number of separate IP addresses to the MAC address of the machine. With enough requests coming from the different addresses, it can become overloaded with traffic, disrupting service, and making it unusable.) or session hijacking (by stealing session IDs, and gaining entry to systems and accounts), and going further.
+
+The probable signs of an ARP poisoning attack can be found in the ARP table. If the table has two different IP addresses that share the same MAC address, then it probably is affected by an ARP poisoning attack. 
+
+ARP poisoning can be mitigated by using encrypted protocols such as HTTPS and SSH, VPN’s, and packet filters to filter out and block malicious packets or suspicious IP addresses. 
+
+
+Domain Name System locates the server where a website’s domain is by resolving the hostname with the domain name in a machine’s local DNS cache, also known as a DNS resolver cache. The cache stores these values that the machine recently saved. If it is present locally, the website will be displayed. If the information is not there, the machine will perform a DNS query, up the chain of authoritative DNS servers, until it finds a nameserver IP address for the domain. 
+
+DNS spoofing mimics legitimate server destinations to redirect a domain’s traffic.
+
+DNS cache poisoning is a user-end method of DNS spoofing, in which a machine’s system logs the fraudulent IP address in its local memory cache. This allows the DNS to recall a bad site specifically for that machine, even if the issue gets resolved or never existed on the server-end. The 3 most common DNS cache poisoning attacks are:
+
+Man-in-the-Middle duping- an attacker steps between a machine and the DNS server to infect both by simultaneously cache poisoning the machine, and server poisoning on the DNS server. This redirects to a malicious site hosted on the attackers local server.
+
+DNS server hijack- an attacker directly reconfigures the server to direct all requesting users to the malicious site. Once the fraudulent DNS entry is injected onto the DNS server, any IP request for the spoofed domain will result in the fake site.
+
+Dns cache poisoning via spam- URLs sent via spam emails. These emails try to frighten users into clicking the given URL, which infects their computer. Banner ads and images can also direct users to this code. Once poisoned, the user's computer will travel to fake websites, spoofed to look like the real website, and threats are introduced to the computer.
+To detect a DNS cache poisoning attack, apply data security analytics, like Splunk or ELK, to monitor normal DNS behavior from attacks, and monitor Active Directory events and File system behavior for abnormal activity.
+
+To mitigate a DNS cache poisoning attack beyond monitoring and analytics, configure the DNS server to limit recursive queries, store only data related to the requested domain, restrict responses to only about the requested domain, force clients to use HTTPS, and use the latest versions of BIND and DNS software. There is also DNS flushing which clears the DNS cache and removes all entries, do not click on non-recognized links, regularly scan for malware, and use a VPN.
+
+Another measure is Domain Name System Security Extensions (DNSSEC)- a new DNS protocol that encrypts DNS requests to prevent forgery, though it does slow down the DNS process. Alternatively, DNS over HTTPS (DoH) is competing for the next version of DNS to keep DNS requests secure without sacrificing speed like DNSSEC.
+
+Question of the Day: In-depth Answer, brought to you by not clicking on links you do not recognize; do not do it.

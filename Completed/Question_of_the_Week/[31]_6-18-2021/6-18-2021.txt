@@ -1,0 +1,16 @@
+6/18/2021
+
+
+Since this has been in the news recently, what is “SEO poisoning” and how has SolarMarker/Jupyter differed from Gootloader in using it? 
+
+
+Search engine optimization (SEO) poisoning, also known as spamdexing, uses keywords, repeated phrases, and link building to increase the prominence of indexed resources in order to overcome search engine algorithms, often to spread malware. These types of attacks have been around since the mid 1990s. 
+
+
+Gootloader is a part of the Gootkit malware family, and uses Google search results to direct people to infected forum sites that contain a download link that would “answer” their question. The sites that attackers initially target are from legitimate companies who’s sites have a good reputation in Google. They then hack the site and inject it with malicious code, allowing the attackers to post content for very specific questions. The code only activates when the visitor's computer is detected using specific operating systems and languages. Since the content is coming from these sites, the forums that are suggested to answer the person’s question are ranked higher in the search results. Once on the forum site, a person would find a link to their question hosted by an “admin”, and when clicked, would be given a zip file that bears the name of their question, fooling them into thinking it is legitimate. This file contains a JavaScript file that begins to infect their computer. These malware files are twice obfuscated making it harder to be detected by anti-malware software on the computer, and does not activate until the computer is rebooted. Once rebooted, the Gootloader begins the final payload download- usually Cobalt Strike, Gootloader, Kronos, or REvil.
+
+
+SolarMarker/Jupyter is a backdoor malware that steals data and credentials from browsers. This attack uses PDF documents that are filled with more than 10 pages of keywords to different subjects. Attackers use the same SEO tactics to rank on searches with the PDF, and once opened, users are prompted to download a .doc or .pdf version of their info. If the link is clicked, users are redirected 5-7 times through sites with top level domains (TLDs) until they arrive at an attacker controlled site that imitates Google Drive. This can lead to the download of SolarMarker/Jupyter malware, or in an effort to avoid detection, random files. It then exfiltrated data to a C2 server and persists by creating shortcuts on the desktop and Startup folder. Not only using Google, these attacks also use AWS and Strikingly website builder service.
+
+
+Brought to you by: a privacy focused search engine founded by Gabriel Weinberg in 2008.

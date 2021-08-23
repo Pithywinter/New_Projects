@@ -1,0 +1,39 @@
+2/03/2021                                                                                                                                15
+
+What are some common challenges to current GRC (Governance, Risk, and Compliance) approaches, what are suggestions to overcome those challenges, and what are some examples of successful GRC practices and tools?
+
+Governance, Risk, and Compliance is the term for the various tools, processes, and strategies that an organization can use for managing their internal governance, risk management, and industry regulation compliance. It is a structured way that IT can manage risk, meet compliance regulations, and work  alongside a business’s objectives .
+
+Some common challenges include:
+* Organizations that function as silos cannot fully unify if the silos are non-compliant to integration of GRC, making data not completely relevant to business information.
+* Businesses that are not completely integrated will have a problem with creating comprehensive GRC frameworks because the actions and needs of each department must align with the overall organization's goals, and a strategy is needed to bring all the data together to effectively inform the business. 
+* Compliance of every department is critical to meet the demands of government regulations.
+* Manual GRC processes are prone to error and do not provide any intelligence.
+* Creating a good GRC culture will have to start with the top executives who encourage taking risk management and compliance seriously.
+
+
+Mitigation steps to overcome these challenges are: 
+* Proactively monitor critical controls to be aware of the next high impact risk.
+* Have plans for change management to help with adoption of regulations.
+* Evaluate and assess the organization’s current risks, people, and processes before looking at software solutions.
+* Proactively automate risk management.
+* Partner with a good vendor that can provide assessment and recommendations to streamline compliance, risk, audit, and vendor risk.
+
+
+A successful GRC will be a translation of the organization's mission into a strategy that concerns governance, risk, control, compliance, and assurance tasks, as well as to share the opinions and values. This business model will be included into the organization's overall business model like reducing risk, increasing performance, and return on investment (ROI). Good practices and tools look like:
+* Having good GRC tools to streamline compliance like ServiceNow, MetricStream, and SAI360.
+* Have a good GRC platform to help with efficiency, risk assessment and reduction, and monitoring objectives.
+* Have good user management software to help monitor user privileges and accesses to systems.
+* Use a Virtual Chief Information Security Officer (vCISO).
+* Use good Security Information and Event Management (SIEM) tools to help detect intrusion attempts and log event information.
+* Use good auditing tools and resources to provide verification of the GRC framework’s efficacy. 
+* For the framework: 
+   * Customize the framework to best meet the goals of the GRC system.
+   * Assess current tools and procedures for supplementation of GRC plan. 
+   * Have clear roles and responsibilities for every part of the framework to ensure strict accountability. 
+   * Do a trial run of the framework on a specific department to see how it works in a real-time environment.
+   * Ensure that the right resources and crucial security tools are in place by thoroughly auditing the GRC framework prior to implementation.
+   * Get a good roadmap with a GRC scan.
+
+
+Brought to you by: Knowing the difference between RTO (Recovery Time Objective: data recovery within allowed time limitations) and RPO (Recovery Point Objective: time from a failure to the last backup, concerning how much data would be lost).

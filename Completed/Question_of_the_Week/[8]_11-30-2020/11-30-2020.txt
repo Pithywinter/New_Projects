@@ -1,0 +1,11 @@
+11/30/2020                                                                                                                                8
+
+
+What is TACACS+ and why it is more secure than other protocols of its kind?
+
+
+Terminal Access Controller Access-Control System Plus (TACACS+) is a Cisco created protocol that communicates via TCP over port 49 and is reliably connection oriented. All data in TACACS+ packets are encrypted. When a server is down, this delivery method makes it easier to detect. Because it is connection oriented, it does not have to implement transmission control. 
+
+Remote Authentication Dial-in User Service (RADIUS) is commonly a two packet type, Access-Request protocol, running on the application layer and can use TCP or UDP as transport. It only encrypts the authentication data of the Authentication, Authorization, and Accounting (AAA) commands. It is less secure than TACACS+ because it transmits username, authorization, and accounting in clear text, making it vulnerable to attacks. By default it uses ports 1812 and 1813. This protocol has to detect packet loss and timeout. 
+
+Question of the Week: In-depth Answer, brought to you securely by SFTP, and by extension FTPS.

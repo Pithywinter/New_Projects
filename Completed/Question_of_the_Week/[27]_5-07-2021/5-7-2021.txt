@@ -1,0 +1,51 @@
+5/7/2021
+
+
+What is the difference between a command injection, a SQL injection, a code injection, a HTML injection, and cross-site scripting?
+
+
+Command injection, also known as OS command injection or shell injection, involves executing arbitrary operating system commands on a host OS, usually by exploiting an application vulnerability. A command injection works when an application passes unsafe data (cookies, HTTP headers, etc) that the user submitted to a system shell, extending the default functionality of the application. This does not require the injecting of code. This application vulnerability usually exists because of insufficient input validation.
+
+
+SQL injection, also known as SQLi, is when malicious SQL statements are executed on a vulnerable web application or webpage, by way of input data from the client to the application. The SQL commands are injected into data-plane input where it affects the execution of predefined SQL commands. A successful injection can access personally identifiable information (PII) and business information, exposing sensitive data. SQL injection is one of the oldest application vulnerabilities and, according to OWASP Top 10, the 3rd most common serious vulnerability. SQL injection is separated into 3 categories:
+
+
+In-band SQLi- The most frequent and commonly used, an attack can be error-based messages to determine the database entities, or union-based using the UNION keyword to retrieve info from other tables.
+
+
+Inferential SQLi- Also known as blind SQLi, where after sending the payload, behavior and responses can be watched to determine the data structure of the database. An attack can be boolean-based, where a query forces the application to return a TRUE or False statement, or time-based, where an application returns generic error messages after a wait period, to determine if the query returns a TRUE or FALSE statement.
+
+
+Out-of-band SQLi- A request that asks the application to transmit data by way of any protocol like HTTP, DNS, or SMB.
+
+
+
+
+Code injection, also known as remote code execution (RCE), is a term used in general for injection attack types that exploit poor handling (input/output validation) of untrusted data by an application that is interpreting or executing the injection. Code is injected in the language of the vulnerable application and executed by the server-side interpreter for that language like PHP, Java, Python, etc. Code injection can allow for access to the server-side interpreter and possibly escalation to run OS command injections on the server.
+
+
+HyperText Markup Language (HTML) injection attacks work via non-validated user input data to a vulnerable web application. An attacker would use HTML text to be stored as content and modify the HTML content of the application’s response. An example would be adding open and closing tags around an injected query to be seen by other users and automatic tools, allowing the defacement of the site or possibly steal a user’s identity by creating forms that the user puts their data into. Once the user submits their input, the data is transmitted to the attacker’s server. This attack is one of the most simple and common to web applications. This injection attack is very similar to XSS with the only difference being that XSS uses scripting to deliver the attack, while HTML uses only HTML tags and code.
+
+
+Cross site scripting (XXS) injects malicious JavaScript, but can also include HTML, Flash, or other web code into trusted websites via a web request, and is sent to a user because of poor content validation. The malicious script can access cookies, session tokens, etc. through an end user’s browser because it thinks the script came from a trusted source.
+
+
+A XSS attack is divided into different categories:
+
+
+Stored- is where the injected script is permanently stored on a target server. This is also known as Type-1 XSS or Persistent XSS. 
+
+
+Blind- a form of persistent, where the payload is saved on the server and sent to a user once they open the form that the payload is in via the backend application.
+
+
+Reflected- are delivered by email or being redirected to other sites by error messages from search results, being reflected from a web server. A user would click on  a malicious link or visit a malicious site, and the injected code travels to the vulnerable website, and reflects the attack to the user’s browser. The browser thinks the script is trusted and executes it. This is also known as a TYPE-2 XSS or Non-Persistent. 
+
+
+DOM based-  also known as Type-0 XSS, the attack is executed by modifying the Document Object Model (DOM) environment in a target’s browser, used by the original client side script so that the code runs in an unexpected manner.
+
+
+The HTTP response does not change, but the client side code contained in the page behaves differently because of the changes made to the DOM environment.
+
+
+Brought to you by proper server side input validation via continuous integration.

@@ -1,0 +1,66 @@
+7/23/2021
+
+If one of my machines has an IPV4 address (in bit form ) of [11000000.10101000.11011111.01100100] and a netmask of [11111111.11111111.00000000.00000000], what is the machine’s IP address in human readable form and its CIDR notation? What is the total number of usable IP of that netmask? 
+
+An IPV4 address in bit form (binary) has 32 spaces like this:
+
+********.********.********.********
+
+Each of those spaces represent a bit. With 8 spaces/bits (represented as either a 0 or a 1), you have 1 byte. The IPv4 address has 4 bytes. These are separated by the period. These bytes are referred to as an octet. 4 bytes equals 4 octets. Each one of the 8 spaces in one byte/octet has a numerical value associated with the location of the space, like this:
+
+Starting  from the period and moving left-
+Space 1 = 1
+Space 2 = 2
+Space 3 = 4
+Space 4 = 8
+Space 5 = 16
+Space 6 = 32
+Space 7 = 64
+Space 8 = 128
+
+This is the same for all of the octets. If we had an octet with a 1 in all 8 places, the total value of the octet would be 255. Like this:
+
+11111111. = 1+2+4+8+16+32+64+128 = 255. (in human readable form)
+
+If one of those spaces/bits had a zero instead of a one, then we do not add that value to the total. For example, say space 5, that has the value of 16, has a zero in its place instead of a one. In bit form, it would look like this:
+
+11110111. = 1+2+4+8+0+32+64+128 = 239. (in human readable form)
+
+If my machine has an IPV4 address (in bit form ) of 11000000.10101000.11011111.01100100, then in human readable form, the IPv4 address is 192.186.233.100 (in human readable form) because:
+
+Octet 1
+11000000. = 0+0+0+0+0+0+64+128 = 192. (in human readable form)
+
+Octet 2
+10101000. = 0+0+0+8+0+32+0+128 = 186. (in human readable form)
+
+Octet 3
+11011111. = 1+2+4+8+16+0+64+128 = 233. (in human readable form)
+
+Octet 4
+01100100 = 0+0+4+0+0+32+64+0 = 100 (in human readable form)
+
+A netmask is a 32-bit value that is used to divide the IP into sections and identify the class of IP. A mask will have 3 numbers that are always the same, represented as a 255. (in human readable form), but the other sections can contain a number from 0 - 255 that represent how many IP addresses can be assigned. The three classes are:
+
+Class A: 255.0.0.0
+Class B: 255.255.0.0
+Class C: 255.255.255.0
+
+In bit form, the netmask is represented the same way an IP address is represented in bit form. If we use Class C as an example:
+
+255.255.255.0 = 11111111.11111111.11111111.00000000 (in bit form)
+
+The bits “mask” the  pre-set IP address and show what is available to assign.
+
+If my machine’s IPv4 address has a netmask of 11111111.11111111.00000000.00000000, then it is 255.255.0.0 (in human readable form), which means this is a Class B IP address.  
+
+Classless Inter-Domain Routing (CIDR) notation is how the netmask is represented for IP routing. If the netmask is 255.255.0.0, the CIDR is represented as a /16. This is because of the 255.255. which is 2 octets, which equal 16 bits of the static IP being masked by 255.255.
+
+For clarification, a subnet mask is used in networking, in basically the same way as a netmask, to segment a larger network into smaller sub-networks, so that data can be sorted and travel without touching the more complex routers of the larger network. A subnet is a collection of machines that share the same network mask.
+
+For how many assignable addresses are allowed, let us use a netmask of 255.255.255.0 or a /24 (in CIDR notation). The 0 represents 256 assignable addresses (the address ending with just a 0, plus the other 255). However, on all address ranges. The first IP is reserved for the Network ID, and the Last is reserved for the Network Broadcast, meaning they cannot be assigned to a host. This means a net mask of 255.255.255.0 or /24 actually only has 254 IP addresses that can be assigned to a host. These 2 addresses are removed from our total, after determining the total number of assignable addresses based on the netmask, or CIDR notation. Since my machine has a notation of /16, that means there are 256 x 256, or 65,536 addresses. Subtracting the 2 reserved IPs, there are 65,534 total IP addresses that can be assigned to a host on a subnet. 
+
+In summary, my machine has an IPv4 address of 192.186.233.100, with a Class B network mask of 255.255.0.0, represented as a /16 in CIDR notation, that means there are 65,534 assignable addresses that can be used. 192.186.233.100/16
+
+
+Brought to you by: this IP address because IP here.

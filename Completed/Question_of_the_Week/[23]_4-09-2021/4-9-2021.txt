@@ -1,0 +1,20 @@
+4/9/2021                                                                                                                                23
+
+What is a race condition, what are some vulnerabilities, how do you detect them, and what are some mitigation strategies to prevent them from being exploited?
+
+A race condition vulnerability is the ability to run multiple, diverse execution threads in parallel processing. These parallel processes are programmed due to the impatient behaviors of humans and the need for software to run quickly. A race condition vulnerability is created when execution order and a lack of multiple computations are invalid (the result of a computation depends on the order of execution of parallel processes).
+
+
+A common vulnerability is the “time of check” vs “time of use” deadlock. This is where a thread needs to acquire a resource for use, and during the “time of check” the resource was there, but before this thread could execute the resource, another thread executed the resource, and now the resource is no longer available for the “time of use”, causing a deadlock.
+
+
+Another vulnerability is the use of temporary files for the storage of critical data. If temporary filenames are predictable, this behavior is susceptible to an attack that could modify the temporary files to change a program’s execution flow, possibly before the application runs, or exploit a buffer overflow vulnerability.
+
+
+Another is the Meltdown attack, where an attacker requests data from an address that is based on a privileged value in memory, and once the requested memory address is placed in the cache, the attacker then requests the memory to all possible values of the base address plus a privileged value, and then timing how long it takes to fetch each piece of data. The piece that was placed in the cache will be fetched faster, giving the attacker access to the protected value by calculating the value + the address.
+
+
+Protecting against race condition vulnerabilities requires the considering of all possible impacts of execution. Common methods of protection are the use of mutexes and atomic operations to keep race conditions from within the code and stopping the use of random temporary filenames. There are tools that can help detect race conditions like the lockset algorithm, used in both static and dynamic analysis tools, that reports a potential race when shared memory is accessed by two or more threads without the threads holding a common lock. A mitigation technique is to lock the memory object that a thread is interacting with. There are also concurrency testing tools like CHESS that systematically explores thread schedules and interleaving. Performance testing and stress testing software will also help in this process. Race condition vulnerabilities are still very hard to detect and there is a need for parallel software development techniques to be developed, since current techniques are for testing and developing sequential applications.
+
+
+Brought you by: the filtering powers of Splunk-   source=”Question_of_the_Week.csv” | eval ratio (my_answers / submissions) | table date, question, my_answers, submissions, ratio
