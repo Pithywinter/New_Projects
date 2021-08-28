@@ -1,0 +1,19 @@
+8/27/2021
+
+What is the difference between an Authoritative nameserver and a Recursive DNS server? What is the difference between BIND and UNBOUND? What attack has seen a resurgence in popularity that is based on Kaminsky's DNS attack? 
+
+An Authoritative name server is the authority registry for domain names in a zone that can be queried, or queries other name servers in the DNS. Anyone who owns a domain name needs an Authoritative name server, so that others can find it on the internet. Authoritative name servers hold the most accurate version of the registry. This is most used by enterprise businesses and individual owners of domains.
+
+A Recursive DNS server has a temporary cached list of searches, and does not have the registry of domain names, but it searches and connects to other nameservers that do have the registry for the domain name queried. A recursive DNS is used most often by everyone (casual internet home users) and devices that need to connect to resources on the internet.
+
+BIND is a suite of DNS server software that has been continuously upgraded since it was written in 1986. It now has advanced DNS features such as DNSSEC and IPv6. Bind can serve as either an Authoritative or Recursive name server by use of its daemon, named (pronounced name-D), and has a web interface and a command line interface. 
+
+UNBOUND was written in 2006, and is used as a Recursive name server. It was written with modern features and the latest technologies in server technology in mind. It has a set of modules that incorporate modern features like DNSSEC, IPv6, and a client resolver API (Application Programming Interface) library. 
+
+Kaminsky’s DNS attack refers to researcher/hacker Dan Kaminsky’s DNS cache poisoning presentation that was given at a 2008 Black Hat Briefings. The attack allows for the hijacking of a domain and theft of data by flooding a DNS server with multiple responses for unique names, or slight variations of the domain name, making it more probable of correctly reproducing a QID (query ID)  DNS transaction number. This would pass the bailiwick check (a resolvers technique for determining whether to accept extra records or not) because the name used would be an addition to the domain name the current record has. By flooding the server with simultaneous answers over UDP, the attacker could get a correct QID, add an additional A record that spoofs the domain’s IP, and redirect traffic to their malicious site. Prior to being patched, if one person at a business visited the attacker’s webpage, the Recursive DNS server for that ISP would forward everyone's traffic of the requested site (example: google.com) to the maliciously hosted site. 
+
+SAD DNS is the name for the newer version of Kaminsky’s DNS cache poisoning attack. This attack uses network side channels (this is information related to time windows and memory consumption) to figure out how long the attacker has to initiate the attack. They then send responses to the server (this works on BIND and UNBOUND, with BIND being slightly more secure) at a higher rate than the configured limit, to mute the server and push through their spoofed record like this:
+
+At a 1pps rate limit, the attacker would use acquired IPs to scan open ports on the router. After an open port is found, the port is probed repeatedly to confirm it will stay open for longer than 1 second. If true, then the attacker issues a query to a forwarder asking for an arbitrary subdomain. If NOERROR response is received, then the forged error response has been injected. Then the attacker injects rogue responses. 
+
+Brought to you by using sudo for everything.
