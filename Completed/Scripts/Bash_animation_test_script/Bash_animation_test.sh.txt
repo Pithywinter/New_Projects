@@ -1,0 +1,69 @@
+﻿#! /bin/bash
+
+y=10
+x=0
+
+
+clear ;
+
+
+while true ; do
+            tput cup $y $x
+            echo ' _____'
+            echo '|         |'
+            echo '|         |'
+            echo '|         |'
+            echo ' ----- '
+
+
+sleep 0.05s ;
+
+
+clear
+
+
+ tput cup $y $x
+            echo ' '
+            echo ' _____'
+            echo '|         |'
+            echo '|         |'
+            echo '|         |'
+            echo ' ----- '
+
+
+sleep 0.05s ;
+
+
+clear
+
+
+ tput cup $y $x
+            echo ' '
+            echo '   _____'
+            echo '  |         |'
+            echo '  |         |'
+            echo '  |         |'
+            echo '   ----- '
+
+
+sleep 0.05s ;
+
+
+clear  
+
+
+ tput cup $y $x
+            echo '   _____'
+            echo '  |         |'
+            echo '  |         |'
+            echo '  |         |'
+            echo '   ----- '
+
+
+sleep 0.05s ;
+
+
+clear
+
+
+done
