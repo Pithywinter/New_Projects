@@ -1,0 +1,11 @@
+What are Docker, Docker Engine, and Docker Desktop? Name 2 major vulnerabilities (in your opinion) to affect the Docker service.
+
+Invented in 2013 by dotCloud, Inc. as a pivot from their PaaS (Platform as a Service) model, Docker is an open platform that was built on LXC (the first widely accessible container tool that worked with Linux kernel upstream, built upon cgroups (control groups) and namespaces) with the purpose of allowing software developers to build an application and package it into a container to be used anywhere. Because Docker simplified the process of using containers (up to that point in time), they became nearly synonymous with containers as being closely considered as an industry standard. 
+
+The Docker Engine is the core product of the Docker service. Docker Engine behaves as a client-server application that contains a server with dockerd, its REST API, and its CLI. 
+
+Docker Desktop is a native downstream application developed for Windows and MAC OS, for use in a development environment, that includes Docker Engine, Kubernetes, Docker APP, and others. 
+
+2 vulnerabilities that I saw were CVE-2021-37841, in which Docker Desktop versions prior to 3.6.0 had incorrectly configured access control that could allow a low-privileged attacker to read, write, and execute code inside the container, and CVE-2019-14271, in which the Docker cp command could allow an attacker full container escape, in Docker versions prior to 19.03.1.
+
+Brought to you using a computer and by sheer will.
