@@ -1,0 +1,11 @@
+NSO Group has infected Apple products with spyware. What kind of exploit did they use? Why is this dangerous? What are some mitigations or policies that might help users and businesses going forward?
+
+NSO Group Technologies (Niv, Shalev and Omri), founded in 2010, is an Isreli cyberarms firm that licenses surveillance software to government agencies. They are largely known for their spyware, Pegasus. 
+
+Using a zero-click exploit called FORCEDENTRY on iMessage, Pegasus was then uploaded. Pegasus deploys a C2 infrastructure that allows the reading of text messages, running of arbitrary code, track calls and location, collecting passwords, harvesting info from apps, and activating the microphone and camera. If Pegasus is on the wrong device, or if it cannot communicate with its C2 server, it will self-destruct. 
+
+This is dangerous because employees of businesses, and the people who talk to those employees, could have their devices infected, leaking sensitive information. 
+
+The first mitigation is to update the IOS to the newest version that was just released. A further mitigation for businesses is a no BYOD policy near the premises, and blocking apps that use messaging or calling features. 
+
+Brought to you by that thing you never clicked on, but here we are.
